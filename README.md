@@ -15,13 +15,13 @@ __Pré-requisitos__
 4. no terminal rode comando ```cd environments``` para entrar no diretório e depois o comando ```cp environment.exemple.ts environment.ts```
     - OBS.: Após esse prcedimento abrir o arquivo environment.ts e lê os comentários
 5. Abra o seu terminal preferido e execute o comando ```npm install``` dentro da pasta raiz deste projeto
-6. Estartando o projeto. Execute o comando ```npm start```. Observar no terminal o caminho da url e porta que será rodado o projeto, normalmente é http://localhos:4200
+6. Estartando o projeto. Execute o comando ```npm start```. Observar no terminal o caminho da url e porta que será rodado o projeto, normalmente é http://localhost:4200
 
 **Se tudo ocorreu bem, seu projeto já deve está pronto para uso**
 
 __🎲 Rodando o projeto em live__
 
-- Veja esse rojeto rodando em sua máquna local sem instalar o **NodeJs** e Angular.
+- Veja esse projeto rodando em sua máquina local sem instalar o **NodeJs** e Angular.
 
 1. Instalar o [Docker](https://www.docker.com/get-started) em seu sistema operacional 
 2. Instalar o [Docker-compose](https://docs.docker.com/compose/install/)
