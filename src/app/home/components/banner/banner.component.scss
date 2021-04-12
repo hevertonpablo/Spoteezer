@@ -1,0 +1,60 @@
+@import '../../../../assets/scss/breakpoints';
+.ms-banner {
+    background-color: #e1f7ff;
+    padding-left: 200px;
+    padding-top: 100px;
+}
+.ms_banner_img {
+	text-align: center;
+	max-width: 511px;
+	width: 100%;
+	float: left;
+	@include d(lg){
+		max-width: 262px;
+	}
+
+	@include d(md){
+		margin-left: -164px;
+	}
+}
+.ms_banner_text {
+	width: calc(100% - 511px);
+	float: left;
+	padding-top: 135px;
+
+	@include d(lg){
+		width: 50%;
+	}
+
+	@include d(md){
+		width: 65%;
+	}
+
+	h1 {
+		font-size: 45px;
+		font-weight: bold;
+		color: #202020;
+
+		@include d(lg){
+			font-size: 35px;
+		}
+
+		@include d(md){
+			font-size: 1.5rem;
+		}
+	}
+
+	h2 {
+
+		@include d(lg){
+		font-size: 0.875rem;
+		}
+
+	}
+}
+
+.ms_banner_text 
+.ms_banner_text p {
+	margin: 15px 0px 40px;
+	line-height: 30px;
+}

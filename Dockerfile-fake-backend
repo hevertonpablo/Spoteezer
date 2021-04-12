@@ -1,0 +1,5 @@
+FROM node:12.11.1-slim    
+EXPOSE 3000
+COPY db.json /opt/mockBackend.json
+RUN yarn global add json-server
+CMD ["json-server", "/opt/mockBackend.json", "-H", "0.0.0.0"]

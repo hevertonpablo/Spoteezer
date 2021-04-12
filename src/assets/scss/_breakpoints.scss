@@ -1,0 +1,79 @@
+$xx-device: 1400px;
+$xl-device: 1200px; //80em
+$lg-device: 992px; //74.31em
+$md-device: 768px; //59.8755em
+$sm-device: 576px; //48em
+$xs-device: 480px; //30em
+
+// (min-width: 992px) and (max-width: 1200px) LG
+// (min-width: 768px) and (max-width: 992px)  MD
+// (min-width: 576px) and (max-width: 768px)  SM
+// (max-width: 576px)                         XS
+
+// MIXINS DE MEDIA QUERY
+@mixin d($size) {
+    @if $size == xl {
+        @media screen and (max-width: #{$xl-device}) {
+            @content;
+        }
+    }
+    @else if $size == lg {
+        @media screen and (max-width: #{$lg-device}) {
+            @content;
+        }
+    }
+    @else if $size == md {
+        @media screen and (max-width: #{$md-device}) {
+            @content;
+        }
+    }
+    @else if $size == sm {
+        @media screen and (max-width: #{$sm-device}) {
+            @content;
+        }
+    }
+    @else if $size == xs {
+        @media screen and (max-width: #{$xs-device}) {
+            @content;
+        }
+    }
+    @else if $size == xx {
+        @media screen and (max-width: #{$xx-device}) {
+            @content;
+        }
+    }
+}
+
+@mixin d-up($size) {
+    @if $size == xl {
+        @media screen and (min-width: #{$xl-device}) {
+            @content;
+        }
+    }
+    @else if $size == lg {
+        @media screen and (min-width: #{$lg-device}) {
+            @content;
+        }
+    }
+    @else if $size == md {
+        @media screen and (min-width: #{$md-device}) {
+            @content;
+        }
+    }
+    @else if $size == sm {
+        @media screen and (min-width: #{$sm-device}) {
+            @content;
+        }
+    }
+    @else if $size == xs {
+        @media screen and (min-width: #{$xs-device}) {
+            @content;
+        }
+    }
+
+    @else if $size == xx {
+        @media screen and (min-width: #{$xx-device}) {
+            @content;
+        }
+    }
+}

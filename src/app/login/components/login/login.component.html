@@ -1,0 +1,27 @@
+<div class="container-fluid main-login">
+    <div class="row">
+        <div class="login-left"></div>
+        <div class="login-right">
+            <i class="fas fa-headphones-alt headphones"></i>
+            <h1 class="h6">Faça seu <span>login.</span></h1>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <label for="email">INSIRA SEU E-MAIL</label>
+                <input type="text" formControlName="email" class="input-radius" id="email" placeholder="E-mail">
+
+                <label for="password">SENHA</label>
+                <input type="password" formControlName="password" class="input-radius" id="password"
+                    placeholder="Insira sua senha">
+
+                <button type="submit">
+                    Entrar
+                    <img *ngIf="loading" class="form_load" alt="Efetuando Login!" title="Efetuando Login!"
+                        src="./assets/images/load_w.gif" />
+                </button>
+            </form>
+            <div class="notice">
+                <a href="#">Esqueceu sua senha?</a>
+                <a href="#">Ainda não tem uma conta Spoteezer</a>
+            </div>
+        </div>
+    </div>
+</div>

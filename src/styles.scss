@@ -1,0 +1,73 @@
+@import "~bootstrap/scss/bootstrap";
+@import "assets/scss/breakpoints";
+@import "assets/scss/cores";
+@import "assets/scss/variaveis";
+
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #777777;
+  background-color: #ffffff;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	margin-bottom: 0;
+	font-family: inherit;
+	font-weight: 600;
+	line-height: 1.2;
+	color: $SecundaryColor;
+}
+
+a {
+	color: $SecundaryColor;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+}
+a:hover {
+	text-decoration: none;
+}
+a:focus,
+button:focus {
+	outline: none;
+}
+.ms_color {
+	color: $SecundaryColor !important
+}
+
+
+.form_load {
+  width: 20px;
+
+  @include d(lg) {
+    width: 15px;
+  }
+}
+
+
+.blue-snackbar {
+  background: $primaryColor;
+  color: #fff;
+}
+
+.ms_content_wrapper {
+	position: relative;
+	margin-left: 160px;
+	margin-right: 80px;
+}

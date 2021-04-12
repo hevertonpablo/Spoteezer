@@ -1,0 +1,49 @@
+<div class="ms_content_wrapper padder_top60">
+    <div class="ms_rcnt_slider">
+        <div id="track" class="ms_heading">
+            <h1>Músicas</h1>            
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper row">
+                <div *ngFor="let track of tracks" class="swiper-slide col-md-3">
+                    <div class="ms_rcnt_box">
+                        <div class="ms_rcnt_box_img">
+                            <img src="{{ track.album.images[0].url }}" alt="{{ track.album.name }}">
+                            <div class="ms_main_overlay">
+                                <div class="ms_box_overlay"></div>
+                                <div class="ms_more_icon">
+                                    <img src="assets/images/svg/more.svg" alt="">
+                                </div>
+                                <ul class="more_option">
+                                    <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add To Favourites</a></li>
+                                    <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add To Queue</a></li>
+                                    <li><a href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
+                                    <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add To Playlist</a></li>
+                                    <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                </ul>
+                                <div *ngIf="track.preview_url" class="ms_play_icon">
+
+                                    
+
+                                    <audio controls="" name="media"><source src="{{ track.preview_url }}" type="audio/mpeg" loop></audio>
+                                    
+                                  
+                                    <img src="assets/images/svg/play.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms_rcnt_box_text">
+                            <h3><a href="#">{{ track.name }}</a></h3>
+                            <p *ngFor="let artist of track.artists">{{ artist.name | titlecase }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+              
+            </div>
+        </div>
+       
+    </div>
+
+</div>

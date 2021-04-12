@@ -1,0 +1,84 @@
+@import '../../../../assets/scss/cores';
+@import '../../../../assets/scss/breakpoints';
+
+
+.ms_header {
+	position: fixed;
+    background-color: #fff;
+    padding: 20px 50px;
+    right: 0;
+    left: 80px;
+    top: 0;
+    z-index: 1000;
+    backface-visibility: hidden;
+    box-shadow: 0px 0px 9px 1px rgba(4, 4, 4, 0.1);
+	@include d(lg){
+		left: 0;
+
+	}
+}
+.ms_top_search {
+	max-width: 395px;
+	position: relative;
+	display: flex;
+	display: inline-block;
+	width: 100%;
+	float: left;
+
+	@include d(md){
+		display: block;
+		float: none;
+	}
+}
+.search_icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 40px;
+	line-height: 40px;
+	background-color: $SecundaryColor;
+	border-radius: 0px 5px 5px 0px;
+	padding: 0px 16px;
+	cursor: pointer;
+}
+.ms_top_search .form-control {
+    display: inline-block;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 15px;
+    line-height: 45px;
+    color: #777;
+    border-radius: 5px;
+    border: 1px solid $SecundaryColor;
+}
+.ms_top_trend {
+	float: left;
+	line-height: 40px;
+	padding-left: 50px;
+
+	@include d(md){
+		padding-left: 3px;
+	}
+
+	@include d(md){
+		padding-left: 3px;
+	}
+
+	span {
+		float: left;
+	}
+
+	ul {
+		float: left;		
+		margin-bottom: -10px;
+
+		li {
+			display: inline-block;
+			padding-right: 10px;
+		}
+	}
+}
+.ms_top_trend a {
+	color: #777777;
+}
+

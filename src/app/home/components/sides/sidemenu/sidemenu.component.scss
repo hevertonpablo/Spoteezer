@@ -1,0 +1,385 @@
+@import '../../../../../assets/scss/cores';
+.ms_sidemenu_wrapper {
+	position: fixed;
+	width: 80px;
+	background-color: #fff;
+	height: 100%;
+	z-index: 10000;
+	top: 0;
+	bottom: 0;
+	box-shadow: 0px 0px 24px 6px rgba(4, 4, 4, 0.2);
+}
+.ms_logo {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.ms_logo span {
+	width: 100%;
+	display: none;
+	font-size: 18px;
+	color: #ffff;
+	text-transform: capitalize;
+}
+.ms_logo_inner {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	min-height: 164px;
+}
+.ms_nav_wrapper {
+	padding: 0px 0px;
+	position: absolute !important;
+	left: 0;
+	top: 164px;
+	right: 0;
+	bottom: 70px;
+}
+.ms_nav_wrapper ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.ms_nav_wrapper ul li {
+	width: 100%;
+	display: block;
+}
+.ms_nav_wrapper ul li a {
+	color: #777777;
+	text-transform: capitalize;
+	width: 100%;
+	display: block;
+	padding: 9px 0px;
+	position: relative;
+	text-align: center;
+	font-size: 14px;
+}
+.ms_nav_wrapper ul li a:after {
+    position: absolute;
+    height: 2px;
+    background-color: #ededed;
+    bottom: 0px;
+    left: 25px;
+    right: 25px;
+    content: "";
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+.ms_nav_wrapper ul li:last-child a:after {
+	display: none;
+}
+.ms_nav_wrapper ul li a:hover,
+.ms_nav_wrapper ul li a.active {
+	background-color: #ff5471;
+	background-position: 0px 0px;
+	color: #ffffff;
+}
+.ms_nav_wrapper ul li a:hover:after,
+.ms_nav_wrapper ul li a.active:after {
+	background-color: $SecundaryColor;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+}
+.ms_nav_wrapper ul.nav_downloads {
+	margin-top: 40px;
+}
+.ms_nav_wrapper ul.nav_playlist {
+	margin-top: 40px;
+}
+.ms_nav_wrapper ul>li>a>span.icon {
+	margin-right: 10px;
+	display: inline-block;
+	-webkit-transform: translate(0, -2px);
+	-moz-transform: translate(0, -2px);
+	-ms-transform: translate(0, -2px);
+	transform: translate(0, -2px);
+}
+.ms_nav_wrapper span.nav_icon>.icon {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url(~src/assets/images/svg/icon.svg);
+	background-repeat: no-repeat;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	display: inline-block;
+}
+.ms_nav_wrapper ul li a span.nav_icon {
+	margin-right: 0;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_discover,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_discover {
+	background-position: 0px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_albums,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_albums {
+	background-position: -30px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_artists,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_artists {
+	background-position: -60px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_genres {
+	background-position: -90px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_tracks,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_tracks {
+	background-position: -120px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_music,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_music {
+	background-position: -150px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_station,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_station {
+	background-position: -180px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_download,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_download {
+	background-position: -210px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_purchased,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_purchased {
+	background-position: -240px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_favourite,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_favourite {
+	background-position: -270px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_history,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_history {
+	background-position: -300px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_fe_playlist,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_fe_playlist {
+	background-position: -328px -28px;
+}
+.ms_nav_wrapper ul li a:hover span.nav_icon>.icon.icon_c_playlist,
+.icon.icon_genres,
+.ms_nav_wrapper ul li a.active span.nav_icon>.icon.icon_c_playlist {
+	background-position: -360px -28px;
+}
+span.nav_text {
+	display: block;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 10px;
+	left: 100%;
+	background-color: #32353d;
+	padding: 0px 12px;
+	white-space: nowrap;
+}
+
+.ms_nav_wrapper span.nav_icon>.icon.icon_discover {
+	background-position: 0px 0px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_albums {
+	background-position: -30px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_artists {
+	background-position: -60px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_genres {
+	background-position: -90px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_tracks {
+	background-position: -120px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_music {
+	background-position: -150px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_station {
+	background-position: -180px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_download {
+	background-position: -210px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_purchased {
+	background-position: -240px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_favourite {
+	background-position: -270px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_history {
+	background-position: -300px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_fe_playlist {
+	background-position: -328px 2px;
+}
+.ms_nav_wrapper span.nav_icon>.icon.icon_c_playlist {
+	background-position: -360px 2px;
+}
+.ms_sidemenu_inner {
+	width: 80px;
+	background-color: #fff;
+	height: 100%;
+	z-index: 1;
+}
+
+.ms_sidemenu_wrapper.open_menu {
+	width: 200px;
+}
+.ms_logo_open {
+	display: none;
+}
+.ms_sidemenu_wrapper.open_menu .ms_logo_open {
+	display: block;
+}
+.ms_sidemenu_wrapper.open_menu .ms_logo {
+	display: none;
+}
+.ms_sidemenu_wrapper.open_menu .ms_sidemenu_inner {
+	width: 200px;
+}
+.ms_sidemenu_wrapper.open_menu span.nav_text {
+	opacity: 1;
+	display: inline-block;
+	visibility: visible;
+	position: relative;
+	left: auto;
+	top: 0;
+	background-color: transparent;
+	vertical-align: bottom;
+}
+.ms_sidemenu_wrapper.open_menu a {
+	text-align: left;
+	padding: 9px 20px;
+}
+.ms_sidemenu_wrapper.open_menu span {
+	display: inline-block;
+}
+
+
+/*====Media Css Start====*/
+@media(max-width:1200px) {
+
+	.ms_sidemenu_wrapper {
+		width: 90px;
+	}
+}
+
+	
+@media(max-width:991px) {
+
+	
+	
+	.ms_sidemenu_wrapper {
+		width: 250px;
+		left: -250px;
+		transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+	}
+	
+	span.nav_text {
+		opacity: 1;
+		display: inline-block;
+		visibility: visible;
+		position: relative;
+		left: auto;
+		top: 0;
+		background-color: transparent;
+		vertical-align: bottom;
+		padding: 0px 12px;
+	}
+	.ms_logo {
+		display: none !important;
+	}
+	.ms_logo_open {
+		display: block !important;
+	}
+	.ms_sidemenu_inner {
+		width: 200px;
+	}
+	
+	.ms_sidemenu_wrapper.open_menu {
+		left: 0;
+	}
+	.ms_nav_wrapper ul li a {
+		padding: 9px 15px;
+	}
+	.ms_sidemenu_wrapper.open_menu a {
+		text-align: left;
+		padding: 9px 15px;
+	}
+	.ms_nav_wrapper ul li a {
+		text-align: left;
+	}
+	
+	
+}
+
+
+
+@media(max-width:767px) {
+	
+	.ms_sidemenu_wrapper {
+		z-index: 10000;
+	}
+	
+}
+@media(max-width:480px) {
+	
+	.ms_sidemenu_wrapper.open_menu .ms_sidemenu_inner {
+		width: 180px;
+	}
+	.ms_sidemenu_inner,
+	.ms_sidemenu_wrapper {
+		width: 180px !important
+	}
+	.ms_nav_wrapper ul li a {
+		font-size: 12px;
+	}
+	span.veiw_all {
+		top: 0;
+		right: auto;
+		left: 0;
+	}
+	.ms_releases_wrapper  {
+		right: 10%!important;
+	}
+	ul.more_option {
+		max-width: 125px;
+		padding: 10px 10px;
+	}
+	ul.more_option li a {
+		padding-bottom: 5px;
+		font-size: 11px;
+		line-height: 19px;
+	}
+	
+}
+@media(max-width:320px) {
+
+	.ms_sidemenu_wrapper.open_menu a {
+		padding: 9px 10px;
+	}
+	.ms_sidemenu_wrapper a {
+		font-size: 13px;
+	}
+	.ms_sidemenu_wrapper.open_menu,
+	.ms_sidemenu_wrapper.open_menu .ms_sidemenu_inner {
+		width: 180px;
+	}
+}

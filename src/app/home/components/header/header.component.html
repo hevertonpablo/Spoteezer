@@ -1,0 +1,48 @@
+<div class="ms_header">
+    <div class="ms_top_left">
+        <div class="ms_top_search">
+
+            <input type="text" [(ngModel)]="model" (ngModelChange)="changed($event)" class="form-control"
+                placeholder="Artista, álbum ou músicas">
+
+            <span class="search_icon">
+                <img src="assets/images/svg/search.svg" alt="">
+            </span>
+
+        </div>
+
+        <div class="ms_top_trend">
+
+            <span><a href="#" (click)="ativarFiltro()" class="ms_color">Filtrar:</a></span>
+            <ul *ngIf="filtro" class="lang_list">
+                <li>
+                    <label class="lang_check_label">
+                        Artista
+                        <input type="checkbox" #artista id="artista" [checked]="saveUsername"
+                            (change)="setArtist(artista)" name="artista">
+                        <span class="label-text"></span>
+                    </label>
+                </li>
+                <li>
+                    <label class="lang_check_label">
+                        Album
+                        <input type="checkbox" #album id="album" [checked]="saveUsername" (change)="setAlbum(album)"
+                            name="album">
+                        <span class="label-text"></span>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="lang_check_label">
+                        Música
+                        <input type="checkbox" #musica id="musica" [checked]="saveUsername" (change)="setMusic(musica)"
+                            name="musica">
+                        <span class="label-text"></span>
+                    </label>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>

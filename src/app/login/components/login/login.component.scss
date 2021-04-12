@@ -1,0 +1,116 @@
+@import "../../../../assets/scss/cores";
+@import "../../../../assets/scss/breakpoints";
+
+div {
+  &.main-login {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .login-left {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 35%;
+      background-color: $primaryColor;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-image: url(~src/assets/images/image-login.jpg);
+
+      @include d(lg) {
+        display: none;
+      }
+    }
+    .login-right {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 65%;
+      right: 0;
+
+      @include d(lg) {
+        width: 100%;
+      }
+
+      .headphones {
+        display: block;
+        text-align: center;
+        padding-top: 53px;
+        font-size: 50px;
+        color: #fd5035;
+      }
+      h1 {
+        color: $primaryColor;
+        padding-top: 100px;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 100;
+        margin-bottom: 70px;
+
+        span {
+          font-size: 2.3rem;
+          font-weight: 700;
+        }
+      }
+      .input-radius {
+        border-radius: 50px;
+        outline: none;
+        border: 1px solid $primaryColor;
+        color: $primaryColor;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 40%;
+        padding: 5px;
+
+        @include d(lg) {
+          width: 80%;
+        }
+      }
+      label {
+        display: block;
+        text-align: center;
+        color: $primaryColor;
+        margin-bottom: 0;
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 0;
+        border-radius: 50px;
+        margin-top: 30px;
+        background-color: $primaryColor;
+        color: #ffffff;
+        width: 20%;
+        outline: none;
+        padding: 5px;
+
+        @include d(lg) {
+          width: 50%;
+        }
+      }
+
+      ::-webkit-input-placeholder,
+      :-moz-placeholder,
+      ::-moz-placeholder,
+      :-ms-input-placeholder {
+        color: #06beb860;
+      }
+
+      .notice {
+        margin-top: 50px;
+        text-align: center;
+        a {
+          display: block;
+          margin-bottom: 15px;
+          color: #8e8a8a;
+        }
+      }
+    }
+  }
+}

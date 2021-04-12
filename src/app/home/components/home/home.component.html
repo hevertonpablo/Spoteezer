@@ -1,0 +1,11 @@
+<div class="ms_main_wrapper">
+
+  <app-sidemenu></app-sidemenu>
+  <app-header (searchcriteria)="searchThis($event)"></app-header>
+  <app-banner></app-banner>
+  <app-artist *ngIf="artists.length > 0" [artists]="artists"></app-artist>
+  <app-album *ngIf="albums.length > 0" [albums]="albums"></app-album>
+  <app-track *ngIf="tracks.length > 0" [tracks]="tracks"></app-track>
+   
+
+</div>
